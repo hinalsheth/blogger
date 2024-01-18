@@ -1,13 +1,14 @@
-<!-- blog/templates/blog/post_list.html -->
 {% extends 'base_generic.html' %}
 
 {% block content %}
+<div class="posts-container">
     <h1>Blog Posts</h1>
     {% for post in posts %}
-        <div>
-            <h2>{{ post.title }}</h2>
-            <p>Posted by {{ post.author }} on {{ post.created_at }}</p>
-            <p>{{ post.content|linebreaks }}</p>
+        <div class="post">
+            <h2 class="post-title">{{ post.title }}</h2>
+            <div class="post-meta">Posted by {{ post.author }} on {{ post.created_at|date:"F d, Y" }}</div>
+            <div class="post-content">{{ post.content|linebreaks }}</div>
         </div>
     {% endfor %}
+</div>
 {% endblock %}
