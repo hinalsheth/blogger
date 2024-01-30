@@ -9,6 +9,9 @@ readme = "README.md"
 python = "^3.11"
 django = "^5.0.1"
 
+[tool.poetry.dev-dependencies]
+pytest-playwright = "0.4"
+
 
 [build-system]
 requires = ["poetry-core"]
